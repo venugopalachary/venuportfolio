@@ -37,4 +37,40 @@ $(document).ready(function () {
             scrollTop: $(target).offset().top
         }, 800);
     });
+
+
+  // hero section text animator
+
+  const changingText = document.getElementById("changing-text");
+    const words = ["Designer", "Developer", "Digital Marketer", "Financial Planner"];
+    let index = 0;
+
+    setInterval(() => {
+        index = (index + 1) % words.length;
+        changingText.textContent = words[index];
+    }, 4000);
+
+
+const swiper = new Swiper('.swiper-container', {
+    slidesPerView: 4, // ✅ 4 Cards in Desktop
+    spaceBetween: 20, // ✅ Adds space between cards
+    loop: true,
+    autoplay: {
+        delay: 0, // ✅ Smooth continuous scrolling
+        disableOnInteraction: false,
+    },
+    speed: 4000, // ✅ Slower movement for better readability
+    grabCursor: true,
+
+    // ✅ RESPONSIVE BREAKPOINTS
+    breakpoints: {
+        320: { slidesPerView: 2, spaceBetween: 10 }, // ✅ 2 Cards in Mobile
+        768: { slidesPerView: 3, spaceBetween: 15 }, // ✅ 3 Cards in Tablets
+        1024: { slidesPerView: 4, spaceBetween: 20 } // ✅ 4 Cards in Desktop
+    }
+});
+
+
+
+
 });

@@ -7,6 +7,10 @@
     
     <!-- Bootstrap 3 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/style.css">
@@ -16,26 +20,33 @@
     <!-- HEADER SECTION -->
     <header>
         <div class="container-fluid">
-            <!-- Desktop Navigation -->
-            <nav class="desktop-nav">
-                <div class="logo">
-                    <h2>VENU GOPAL</h2>
-                </div>
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#work">Work</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <button class="btn btn-warning contact-btn">Contact Me</button>
-            </nav>
+           
+            <!-- DESKTOP NAVIGATION -->
+                <nav class="desktop-nav">
+                    <div class="nav-container">
+                        <!-- Logo -->
+                        <div class="nav-logo">
+                            <img src="assets/images/logo.svg" alt="Logo">
+                        </div>
+
+                        <!-- Navigation Links -->
+                        <ul class="nav-links">
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#work">Work</a></li>
+                            <li><a href="#projects">Projects</a></li>
+                        </ul>
+
+                        <!-- Contact Me Button -->
+                        <button class="nav-contact-btn">Contact Me</button>
+                    </div>
+                </nav>
 
             <!-- Mobile Navigation -->
             <nav class="mobile-nav">
                 <div class="menu-toggle" id="open-menu">
                     <img src="assets/icons/menu.svg" alt="Menu Icon" width="30">
                 </div>
-                <h2 class="mobile-title">VENU GOPAL</h2>
+                <h2 class="mobile-title"> <img src="assets/images/logo.svg" alt="Logo" style="height: 40px;width: auto;"></h2>
                 <div class="contact-icon">
                     <img src="assets/icons/phonecall.svg" alt="Phone Icon" width="30">
                 </div>
@@ -77,7 +88,9 @@
     
    <!-- HERO SECTION -->
     <section id="hero" class="container">
-        <div class="row">
+
+
+         <div class="row">
             <!-- Profile Image -->
             <div class="col-md-6 text-center">
                 <img src="assets/images/profile.png" alt="Venu Gopal" class="img-responsive hero-image">
@@ -86,7 +99,7 @@
             <!-- Hero Text -->
             <div class="col-md-6">
                 <h1 class="hero-text"><span>VENU GOPAL</span></h1>
-                <h2 class="hero-text2">I am a <span>Designer</span></h2>
+                <h2 class="hero-text2">I am a <span id="changing-text" >Designer</span></h2>
                 <p class="hero-textp">
                     Blending creativity, strategy, and technology to drive impactful solutions.
                     From crafting seamless user experiences to building scalable systems and 
@@ -95,34 +108,89 @@
                 <button class="contact-btn">Contact Me <span>➤</span></button>
             </div>
         </div>
+
+       <!-- New Row for Scrolling Cards (Fix) -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- Each Card Inside Swiper Slide -->
+                    <div class="swiper-slide scroll-card"><img src="assets/images/mit.png" alt="MIT"><p>Psychology</p></div>
+                    <div class="swiper-slide scroll-card"><img src="assets/images/design.png" alt="Design"><p>Design</p></div>
+                    <div class="swiper-slide scroll-card"><img src="assets/images/w3c.png" alt="W3C"><p>Developer</p></div>
+                    <div class="swiper-slide scroll-card"><img src="assets/images/isb.svg" alt="ISB"><p>Digital Marketing</p></div>
+                    <div class="swiper-slide scroll-card"><img src="assets/images/stanford.png" alt="Stanford"><p>Business Fundamentals</p></div>
+                </div>
+            </div>
+
     </section>
 
 
 
     <!-- DUMMY SECTIONS TO TEST MENU FUNCTION -->
-    <section id="home">
-        <h2>Home Section</h2>
-        <p>Welcome to the home section.</p>
+    <section id="services" class="container" >
+         <h2 class="ServiceTitle text-center">SERVICES</h2>
+    
+    <div class="row">
+          <!-- Service Block (Text + Number) -->
+            <div class="col-md-6 service-block">
+                <div class="service-number">01</div>
+                <div class="service-content">
+                    <h3 class="service-title">Psychology</h3>
+                    <ul class="service-list">
+                        <li>MCA</li>
+                        <li>GST</li>
+                        <li>IP</li>
+                    </ul>
+                    <button class="know-more-btn">Know More</button>
+                </div>
+            </div>
+
+            <!-- Service Image (Directly Placed Without .service-icon) -->
+            <div class="col-md-6 ">
+                <img src="assets/images/services/psychology.svg" alt="Psychology">
+            </div>
+    </div>
+
+    <div class="row service-container" style="margin-top: 100px;">
+        <!-- Service 2 -->
+
+       
+
+                <!-- Left Image -->
+            <div class="col-md-6 ">
+                <img src="assets/images/services/design.svg" alt="Design">
+            </div>
+
+            <!-- Right Content -->
+            <div class="col-md-6 service-block-2">
+                <div class="service-content">
+                    <h3 class="service-title">Design</h3>
+                    <div class="service-lists">
+                        <ul class="service-list">
+                            <li>Logo</li>
+                            <li>Branding Kit</li>
+                            <li>Brand Voice</li>
+                        </ul>
+                       
+                    </div>
+                    <button class="know-more-btn">Know More</button>
+                </div>
+
+                <div class="service-number">02</div>
+            </div>
+
+    </div>
+
+    <!-- Repeat for other services (03 to 08) following the same pattern -->
     </section>
 
-    <section id="about">
-        <h2>About Section</h2>
-        <p>Learn more about me in this section.</p>
-    </section>
-
-    <section id="work">
-        <h2>Work Section</h2>
-        <p>Check out my work here.</p>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Section</h2>
-        <p>Reach out to me here.</p>
-    </section>
+ 
 
     <!-- jQuery and Bootstrap 3 Scripts -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script src="js/script.js"></script>
 
     
