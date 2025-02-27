@@ -73,12 +73,31 @@
         </div>
     </div>
 
-    <!-- HERO SECTION -->
-    <section id="hero">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Blending creativity, strategy, and technology to drive impactful solutions.</p>
-        <a href="#contact" class="btn btn-warning">Get in Touch</a>
+   
+    
+   <!-- HERO SECTION -->
+    <section id="hero" class="container">
+        <div class="row">
+            <!-- Profile Image -->
+            <div class="col-md-6 text-center">
+                <img src="assets/images/profile.png" alt="Venu Gopal" class="img-responsive hero-image">
+            </div>
+
+            <!-- Hero Text -->
+            <div class="col-md-6">
+                <h1 class="hero-text"><span>VENU GOPAL</span></h1>
+                <h2 class="hero-text2">I am a <span>Designer</span></h2>
+                <p class="hero-textp">
+                    Blending creativity, strategy, and technology to drive impactful solutions.
+                    From crafting seamless user experiences to building scalable systems and 
+                    growth-focused strategies, I turn ideas into reality. Let's create something extraordinary!
+                </p>
+                <button class="contact-btn">Contact Me <span>➤</span></button>
+            </div>
+        </div>
     </section>
+
+
 
     <!-- DUMMY SECTIONS TO TEST MENU FUNCTION -->
     <section id="home">
